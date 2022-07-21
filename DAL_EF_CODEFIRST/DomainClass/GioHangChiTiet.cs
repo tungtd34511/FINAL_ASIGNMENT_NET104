@@ -23,7 +23,6 @@ namespace DAL_EF_CODEFIRST.DomainClass
         public Guid IdChiTietSP { get; set; }
         public virtual ChiTietSP ChiTietSp { get; set; }
         public int SoLuong { get; set; }
-        [DefaultValue(0)]
         public decimal DonGia { get; set; }
     }
 }

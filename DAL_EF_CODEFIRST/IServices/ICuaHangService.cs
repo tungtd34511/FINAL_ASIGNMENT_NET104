@@ -5,8 +5,8 @@ using DAL_EF_CODEFIRST.DomainClass;
 
 namespace DAL_EF_CODEFIRST.IServices
 {
-    public interface IMauSacService : IMainService
+    public interface ICuaHangService : IMainService
     {
-        List<MauSac> GetAll();
+        List<CuaHang> GetAll();
     }
 }

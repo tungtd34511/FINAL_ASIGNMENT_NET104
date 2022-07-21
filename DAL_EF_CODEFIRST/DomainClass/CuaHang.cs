@@ -15,19 +15,19 @@ namespace DAL_EF_CODEFIRST.DomainClass
     //    ThanhPho NVARCHAR(50) DEFAULT NULL,
     //    QuocGia NVARCHAR(50) DEFAULT NULL
     //)
-    public class CuaHang // pulic class để còn gọi và khai báo lớp
+    public class CuaHang 
     {
-        [Key]//set khóa chính
+        [Key]
         public Guid Id { get; set; }
-        [StringLength(20)]//set độ dài cho kiểu ký tự string là 20
+        [StringLength(20)]
         public string Ma { get; set; }
-        [StringLength(50), Required,DefaultValue(null)] //string là 50, set cho đối tượng được phép null
+        [StringLength(50), Required]
         public string Ten { get; set; }
-        [StringLength(100), Required, DefaultValue(null)]
+        [StringLength(100), Required]
         public string DiaChi { get; set; }
-        [StringLength(50), Required, DefaultValue(null)]
+        [StringLength(50), Required]
         public string ThanhPho { get; set; }
-        [StringLength(50), Required, DefaultValue(null)]
+        [StringLength(50), Required]
         public string QuocGia { get; set; }
 
     }

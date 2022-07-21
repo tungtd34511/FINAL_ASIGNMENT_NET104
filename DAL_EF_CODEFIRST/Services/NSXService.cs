@@ -8,11 +8,11 @@ using DAL_EF_CODEFIRST.IServices;
 
 namespace DAL_EF_CODEFIRST.Services
 {
-    public class MauSacService : AllServices,IMauSacService 
+    public class NSXService : AllServices, INSXService
     {
-        public List<MauSac>  GetAll()
+        public List<NSX>  GetAll()
         {
-            return _Context.MauSacs.ToList();
+            return _Context.Nsxes.ToList();
         }
     }
 }

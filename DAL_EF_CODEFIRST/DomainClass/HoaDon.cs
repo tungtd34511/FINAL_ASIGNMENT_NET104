@@ -29,28 +29,22 @@ namespace DAL_EF_CODEFIRST.DomainClass
     {
         [Key]
         public Guid Id{ get; set; }
-        // ddaang bi loi con tro -_-
         public Guid IdKH { get; set; }
         public virtual KhachHang KhachHang { get; set; }
         public Guid IdNV { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         [StringLength(20)]
         public string Ma { get; set; }
-        [DefaultValue(null)]
         public DateTime? NgayTao { get; set; }
-        [DefaultValue(null)]
         public DateTime? NgayThanhToan { get; set; }
-        [DefaultValue(null)]
         public DateTime? NgayNhan { get; set; }
-        [DefaultValue(null)]
         public DateTime? NgayShip { get; set; }
-        [DefaultValue(false)]
         public bool TinhTrang { get; set; }
-        [StringLength(50),DefaultValue(null), Required]
+        [StringLength(50), Required]
         public string TenNguoiNhan { get; set; }
-        [StringLength(100), DefaultValue(null), Required]
+        [StringLength(100), Required]
         public string DiaChi { get; set; }
-        [StringLength(30), DefaultValue(null), Required]
+        [StringLength(30), Required]
         public string Sdt { get; set; }
 
     }

@@ -33,21 +33,20 @@ namespace DAL_EF_CODEFIRST.DomainClass
         public string Ma { get; set; }
         [StringLength(30)]
         public string Ten { get; set; }
-        [StringLength(30),DefaultValue(null), Required]
+        [StringLength(30) ,Required]
         public string TenDem { get; set; }
-        [StringLength(30), DefaultValue(null), Required]
+        [StringLength(30) ,Required]
         public string Ho { get; set; }
         public DateTime? NgaySinh { get; set; }
-        [StringLength(30), DefaultValue(null), Required]
+        [StringLength(30),  Required]
         public string Sdt { get; set; }
-        [StringLength(100),DefaultValue(null), Required]
+        [StringLength(100), Required]
         public string DiaChi { get; set; }
-        [StringLength(50), DefaultValue(null), Required]
+        [StringLength(50),  Required]
         public string ThanhPho { get; set; }
-        [StringLength(50), DefaultValue(null), Required]
+        [StringLength(50),  Required]
         public string QuocGia { get; set; }
         [ DefaultValue(null)]
         public string  MatKhau { get; set; }
-        //khach hangf laf bang 1
     }
 }

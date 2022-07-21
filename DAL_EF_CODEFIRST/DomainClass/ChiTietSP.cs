@@ -21,7 +21,7 @@ namespace DAL_EF_CODEFIRST.DomainClass
     //    GiaBan DECIMAL(20,0) DEFAULT 0,
     //)
     [Table("ChiTietSP")]
-    public class ChiTietSP //4 bang noi voi chi tiet
+    public class ChiTietSP 
     {
         public Guid Id { get; set; }
         public Guid IdSP { get; set; }
@@ -32,14 +32,11 @@ namespace DAL_EF_CODEFIRST.DomainClass
         public virtual MauSac MauSac { get; set; }
         public Guid IdDongSP { get; set; }
         public virtual DongSP DongSP { get; set; }
-        [DefaultValue(null)]
         public int? NamBH { get; set; }
-        [DefaultValue(null), Required]
+        [Required]
         public string MoTA{ get; set; }
         public int SoLuongTon { get; set; }
-        [DefaultValue(0)]
         public decimal GiaNhap { get; set; }
-        [DefaultValue(0)]
         public decimal GiaBan { get; set; }
     }
 }

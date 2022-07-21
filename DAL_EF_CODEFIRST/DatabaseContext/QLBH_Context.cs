@@ -8,18 +8,17 @@ namespace DAL_EF_CODEFIRST.DatabaseContext
 {
     public class QLBH_Context : DbContext
     {
-        // tự nạp chồng khi khởi tạo QLBH_Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            if (optionsBuilder.IsConfigured == false)// chỗ này để là fales
+            if (optionsBuilder.IsConfigured == false)
             {
                 optionsBuilder.UseSqlServer(
                     "Data Source=TUNGHACK\\SQLEXPRESS;Initial Catalog=EF_CodeFirst;Integrated Security=True");
                 //"Data Source= Ten server;Initial Catalog= ten-database;câu hình kết nối"
             }
         }
-
+        
         public DbSet<ChiTietSP> ChiTietSps { get; set; }
         public DbSet<ChucVu> ChucVus { get; set; }
         public DbSet<CuaHang> CuaHangs { get; set; }
@@ -67,10 +66,9 @@ namespace DAL_EF_CODEFIRST.DatabaseContext
             modelBuilder.Entity<ChiTietSP>()
                 .Property(c => c.Id)
                 .HasDefaultValueSql("newsequentialid()");
-            modelBuilder.Entity<SanPham>()// nếu không set được giá trị mặc định thì phải dùng fluen API như này
+            modelBuilder.Entity<SanPham>()
                 .Property(c => c.Id)
                 .HasDefaultValueSql("newsequentialid()");
-            // set khóa chỉnh bảng hóa đơn chi tiết và giỏ hàng chi tiết
             modelBuilder.Entity<GioHangChiTiet>()
                 .HasKey(c => new
                 {
@@ -82,9 +80,7 @@ namespace DAL_EF_CODEFIRST.DatabaseContext
                     c.IdChiTietSP,
                     c.IdHoaDon
                 });
-            //set project chạy chính
         }
     }
-    // Tao debset đổ dữ liệu từ Database xuống
     
 }

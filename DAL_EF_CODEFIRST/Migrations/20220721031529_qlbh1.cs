@@ -7,7 +7,6 @@ namespace DAL_EF_CODEFIRST.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            // đây gần gióng với fluen API / chạy update-database để tạo DB // 
             migrationBuilder.CreateTable(
                 name: "ChucVu",
                 columns: table => new
